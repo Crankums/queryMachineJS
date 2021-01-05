@@ -1,20 +1,30 @@
-const stringSlicer = (() => {
-  const deVowel = (input) => {
-    return input.replace(/[aeiou]/gi,'')
-  }
-  return {
-    chopper: (str, charLgnth, vowel) => {
-      if (vowel) {
-        str = deVowel(str)
-      }
-      let retArr = []
-      for (let i=0; i<str.length; i ++) {
-        let subStr = str.slice(i, i + charLgnth)
-        subStr.length === charLgnth ? retArr.push(subStr) : i++
-      }
-      return retArr
-    },
-    chunker: (str, len, vowel) => {
+class StringChopper {
+    constructor(string){
+        this.string = string
+        this.queryObj = {}
+    }
+
+    get queryObj(){
+        return this.queryObj
+    }
+
+    deVowel(input) {
+        return input.replace(/[aeiou]/gi,'')
+    }
+  
+    chopper(str, charLgnth, vowel) {
+        if (vowel) {
+            str = deVowel(str)
+        }
+        let retArr = []
+        for (let i=0; i<str.length; i ++) {
+            let subStr = str.slice(i, i + charLgnth)
+            subStr.length === charLgnth ? retArr.push(subStr) : i++
+        }
+        return retArr
+    }
+
+    chunker(str, len, vowel) {
         if (vowel) {
             str = deVowel(str) 
         }
@@ -26,7 +36,5 @@ const stringSlicer = (() => {
         }
         return retArr
     }
-  }
-})()
+}
 
-export default stringSlicer
