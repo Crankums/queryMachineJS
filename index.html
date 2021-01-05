@@ -11,11 +11,23 @@
             <input type="text" placeholder="Input search term here" id='search-term-input'>
             <!-- <input type='submit'> -->
             <button class='button' id='choppin-button'>Start Choppin'!</button>
+            <div id="checkboxes">
+                <input type="checkbox" name="3-chars" id="3-chars">
+                <label for="3">3</label>
+                <input type="checkbox" name="4-chars" id="4-chars">
+                <label for="4">4</label>
+                <input type="checkbox" name="5-chars" id="5-chars">
+                <label for="5">5</label>
+                <input type="checkbox" name="vowels" id="vowels">
+                <label for="Remove Vowels?">Remove Vowels?</label>
+
+            </div>
         </div>
         <div class="query-table">
         </div>
     </div>
     <script src="src/components/app.js"></script>
+    <script src="src/lib/stringChopper.js"></script>
     <script src="src/index.js"></script>
 </body>
 <footer class='footer'>Designed for Numerator by Craig Donavin, ©2021</footer>
