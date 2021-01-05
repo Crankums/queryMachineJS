@@ -1,12 +1,12 @@
 class StringChopper {
     constructor(string){
-        this.string = string
+        this.input = string
         this.queryObj = {}
     }
 
-    get queryObj(){
-        return this.queryObj
-    }
+    // get queryObj(){
+    //     return this.queryObj
+    // }
 
     deVowel(input) {
         return input.replace(/[aeiou]/gi,'')
@@ -14,7 +14,7 @@ class StringChopper {
   
     chopper(str, charLgnth, vowel) {
         if (vowel) {
-            str = deVowel(str)
+            str = this.deVowel(str)
         }
         let retArr = []
         for (let i=0; i<str.length; i ++) {
