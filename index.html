@@ -6,15 +6,17 @@
     <link rel='stylesheet' href='style.css'>
 </head>
 <body>
-    <div class='content'>
+    <div class='content' id='main-container'>
         <div class="string-input">
-            <input type="text" placeholder="Input search term here">
+            <input type="text" placeholder="Input search term here" id='search-term-input'>
             <!-- <input type='submit'> -->
-            <button class='button'>Start Choppin'!</button>
+            <button class='button' id='choppin-button'>Start Choppin'!</button>
         </div>
         <div class="query-table">
         </div>
     </div>
+    <script src="src/components/app.js"></script>
+    <script src="src/index.js"></script>
 </body>
 <footer class='footer'>Designed for Numerator by Craig Donavin, ©2021</footer>
 </html>
