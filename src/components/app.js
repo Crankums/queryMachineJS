@@ -33,8 +33,15 @@ class App {
         for (let key in queryObj) {
             let row = document.createElement('tr')
             row.setAttribute('id', `${key}`)
-            row.innerHTML = `${key}`
+            row.innerHTML = `${key}: `
             this.tbody.appendChild(row)
+            // create table cells by looping queryObj[key] array
+            for (let i = 0; i<queryObj[key].length;  i++) {
+                let cell = document.createElement('td')
+                cell.setAttribute('id','search-term')
+                cell.innerHTML = ` ${queryObj[key][i]} `
+                row.appendChild(cell)
+            }
         }
     }
 
