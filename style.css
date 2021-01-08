@@ -6,6 +6,18 @@ body {
     display: flex;flex-direction: column;
 }
 
+#main-container {
+    width: 50%;
+    border-style: solid;
+    border-color: grey;
+}
+
+td {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+
 input {
     border-radius: 25px;
 }
