@@ -27,7 +27,10 @@ class App {
             console.log(`${key}: ${queryObj[key]}`)
         }
         this.tableBuilder(this.objectBuilder(checkboxes, input, queryObj))
+        // this.input.value = ''
+        // this.checkboxes.value = false
     }
+    
 
     tableBuilder(queryObj){
         for (let key in queryObj) {
@@ -59,7 +62,7 @@ class App {
                 source = { [chopperKey] : this.stringChopper.chopper(string, parseInt(inputs[i].dataset.value)),
                     [chunkerKey] : this.stringChopper.chunker(string, parseInt(inputs[i].dataset.value))}
                 Object.assign(queryObj, source)
-            }
+            } 
         }
         return queryObj
     }
